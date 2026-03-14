@@ -21,7 +21,7 @@ Firmware_Diy_Core() {
 	Default_Flag=AUTO
 	# 固件标签 (名称后缀), 适用不同配置文件, AUTO: [自动识别]
 	
-	Default_IP="192.168.1.1"
+	Default_IP="192.168.50.1"
 	# 固件 IP 地址
 	
 	Default_Title="Powered by AutoBuild-Actions"
@@ -175,7 +175,7 @@ EOF
 	;;
 	hanwckf/immortalwrt-mt798x*)
 		case "${TARGET_PROFILE}" in
-		cmcc_rax3000m | jcg_q30)
+		cmcc_rax3000m | jcg_q30| 360t7)
 			AddPackage fakehttp yingziwu luci-app-fakehttp main
 			AddPackage fakehttp yingziwu openwrt-fakehttp main
 				

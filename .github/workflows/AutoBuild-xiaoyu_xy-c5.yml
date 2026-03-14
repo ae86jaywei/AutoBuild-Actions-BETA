@@ -4,7 +4,7 @@
 #   Author: Hyy2001X                                      #
 ###########################################################
 
-name: Xiaoyu C5
+name: 360T7
 
 on:
   repository_dispatch:
@@ -26,11 +26,11 @@ on:
     inputs:
       Tempoary_CONFIG:
         description: '配置文件'
-        default: 'xiaoyu_xy-c5'
+        default: '360T7.config'
         type: choice
         options:
-          - 'xiaoyu_xy-c5'
-          - 'xiaoyu_xy-c5-Clash'
+          - '360T7'
+          - '360T7-Clash'
       Tempoary_FLAG:
         description: '固件标签'
         default: 'AUTO'
@@ -41,7 +41,7 @@ on:
           - 'Clash'
       Tempoary_IP:
         description: '固件 IP 地址 [可选]'
-        default: ''
+        default: '192.168.50.1'
       UPLOAD_RELEASES:
         description: '上传固件到 Releases'
         default: 'true'
@@ -74,7 +74,7 @@ env:
 
 jobs:
   Compile:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.10
     permissions:
       issues: write
       pull-requests: write
